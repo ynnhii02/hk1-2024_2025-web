@@ -1,0 +1,67 @@
+body {
+    margin: 0%;
+    padding: 10px 0px;
+}
+
+#container {
+    width: 700px;
+    height: 800px;
+    background-color: rgb(43, 243, 100);
+    border: 1px rgb(189, 34, 34) solid;
+    margin: 0 auto;
+}
+
+header {
+    width: 670px;
+    height: 150px;
+    background-color: rgb(148, 44, 120);
+    margin: 30px 15px 15px;
+}
+
+nav {
+    width: 640px;
+    height: 50px;
+    background-color: rgb(116, 189, 15);
+    margin: 80px 15px 15px;
+    float: left;
+}
+
+#left {
+    width: 390px;
+    height: 520px;
+    background-color: rgb(27, 167, 218);
+    float: left;
+    margin: 5px 10px 15px 15px;
+}
+
+article {
+    width: 300px;
+    height: 230px;
+    background-color: rgb(206, 149, 36);
+    float: left;
+    margin: 18px 40px 5px;
+}
+
+#right {
+    width: 255px;
+    height: 520px;
+    background-color: rgb(213, 42, 213);
+    float: right;
+    margin: 5px 15px 15px 5px;
+}
+
+section {
+    width: 200px;
+    height: 230px;
+    background-color: rgb(180, 178, 17);
+    float: right;
+    margin: 18px 30px 5px;
+}
+
+footer {
+    width: 670px;
+    height: 50px;
+    clear: both;
+    background-color: rgb(130, 190, 170);
+    margin: 30px 15px 15px;
+}

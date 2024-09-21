@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            color: #c43c3c;
+            padding-top: 0px;
+            font-style: italic;
+            font-size: 40px;
+            color: #cc0000;
+            text-shadow: 3px 20px 5px rgba(244, 29, 29, 0.5);
+        }
+        
+        .navbar {
+            background-color: #f9c1c1;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        
+        .navbar input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .content {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .sidebar {
+            background-color: #f9c1c1;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            background-color: #ffb4b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+            float: left;
+        }
+        
+        .sidebar a:hover {
+            background-color: #ff9999;
+        }
+        
+        .menu-section {
+            background-color: #ffecec;
+            flex-grow: 1;
+            padding: 20px;
+            width: 50%;
+            float: left;
+        }
+        
+        .menu-section h2,
+        .events-section h2,
+        .information-section h2 {
+            color: #c43c3c;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .menu-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .menu-section ul li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .events-section {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            background-color: #0b0a0a;
+            padding: 20px;
+            width: 25%;
+            float: left;
+        }
+        
+        .event {
+            background-color: #0c0b0b;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .event img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .information-section {
+            background-color: #ffecec;
+            padding: 20px;
+        }
+        
+        .information-section form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .information-section form input,
+        .information-section form select,
+        .information-section form textarea {
+            width: 48%;
+            padding: 10px;
+            margin: 1%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .information-section form textarea {
+            width: 98%;
+            height: 100px;
+        }
+        
+        .information-section form input[type="submit"],
+        .information-section form input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            margin: 1%;
+            background-color: #c43c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f9c1c1;
+            color: #c43c3c;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>EXAMPLE CAFE MENU</h1>
+        </div>
+
+        <div class="navbar">
+            <img src="icons8-home-50.png" alt="" style="color: white; width: 35px; top: 30px;">
+            <a href="#">STARTER</a> &nbsp;&nbsp;
+            <a href="#">MAIN COURSES</a> &nbsp;&nbsp;
+            <a href="#">DESSERTS</a> &nbsp;&nbsp;
+            <input type="text" placeholder="Search"> &nbsp;&nbsp;
+            <button style="width: 30px; height: 30px; border-radius: 5px;">go</button>
+        </div>
+
+        <div class="content">
+            <div class="sidebar">
+                <a href="#">Café Latte</a>
+                <a href="#">Cappuccino</a>
+                <a href="#">Ocean Blue</a>
+                <a href="#">Ice-cream Café</a>
+                <a href="#">Order Online</a>
+            </div>
+
+            <div class="menu-section">
+                <h2>
+                    <center style="flex-direction: row-reverse;">Starter</center>
+                </h2>
+                <ul>
+                    <li>Chestnut and Mushroom Goujons</li>
+                    <li>Goat Cheese</li>
+                    <li>Honey Soy Chicken Kebabs</li>
+                    <li>Seafood Salad</li>
+                </ul>
+                <h2>
+                    <center>Desserts</center>
+                </h2>
+                <ul>
+                    <li>Lemon Sorbet</li>
+                    <li>Chocolate Mud Pie</li>
+                    <li>Pecan Pies</li>
+                    <li>Selection of Fine Cheeses from Around the World</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="events-section">
+            <div class="event">
+                <h2>Regular Meetings</h2>
+                <img src="meeting.png" alt="Meeting Image">
+                <p>Host your regular team meetings or activities in the comfort of your own private room. <a href="#">Read more...</a></p>
+            </div>
+            <div class="event">
+                <h2>Product Launches</h2>
+                <img src="launch.jpg" alt="Product Launch Image">
+                <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a></p>
+            </div>
+        </div>
+
+        <div class="information-section">
+            <h2>Information</h2>
+            <form>
+                <input type="text" name="firstname" placeholder="First Name">
+                <input type="text" name="lastname" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="telephone" placeholder="Telephone">
+                <select name="country">
+                <option value="usa">USA</option>
+            </select>
+                <input type="radio" name="status" value="vietnamese"> Vietnamese
+                <input type="radio" name="status" value="foreigner"> Foreigner
+                <textarea name="comment" placeholder="Comment"></textarea>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Cancel">
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>ABC Company - 12345678 - abccoffee@gmail.com</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

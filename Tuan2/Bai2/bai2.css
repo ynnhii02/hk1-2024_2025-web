@@ -1,0 +1,176 @@
+* {
+    padding: 0px;
+    margin: 0px auto;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    color: gray;
+}
+
+h2 {
+    font-size: 30px;
+    color: red;
+}
+
+.wrapper {
+    height: 1000px;
+    width: 1500px;
+    background-color: oldlace;
+    box-sizing: border-box;
+}
+
+header {
+    height: 150px;
+    width: 1500px;
+    background-image: url(background.png);
+}
+
+.box {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+    float: left;
+}
+
+.box1 {
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.box2 {
+    margin-top: 90px;
+    margin-left: -370px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar {
+    height: 50px;
+    width: 1500px;
+    background-color: rgb(126, 117, 122);
+}
+
+.navbartext {
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+}
+
+.navbartext_item,
+.navbartext_item-link {
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+
+.navbartext_item-link-home {
+    color: black;
+    margin-left: 20px;
+}
+
+#containt {
+    height: 800px;
+    width: 1500px;
+}
+
+.cnt1 {
+    height: 800px;
+    width: 35%;
+    background-color: white;
+    float: left;
+}
+
+.art1 {
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: solid 1px;
+}
+
+.cnt2 {
+    height: 800px;
+    width: 35%;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+.art2 {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.art2_under {
+    margin-top: 190px;
+    margin-left: 20px;
+}
+
+.cnt3 {
+    height: 800px;
+    width: 29.89%;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    border-left: solid 0.01px;
+    border-color: grey;
+}
+
+.menu1 {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.menu_li {
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: red;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.gach {
+    margin-left: -15px;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+.menu2 {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.menu_li2 {
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 3px;
+    color: grey;
+}
+
+footer {
+    height: 50px;
+    width: 1500px;
+    background-color: rgb(126, 117, 122);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ftend {
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    position: relative;
+    top: 20px;
+}

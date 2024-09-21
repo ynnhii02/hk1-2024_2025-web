@@ -1,0 +1,123 @@
+.wrapper {
+    width: 800px;
+    height: 950px;
+    border: solid;
+}
+
+header {
+    height: 200px;
+    width: 800px;
+}
+
+.img1 {
+    position: relative;
+    left: 470px;
+}
+
+.containt {
+    border-top: solid;
+    border-color: rgb(255, 217, 0);
+    height: 800px;
+    width: 800px;
+}
+
+.cnt1 {
+    width: 25%;
+    height: 800px;
+    background-image: url(back.jpg);
+    background-repeat: repeat-y;
+    position: relative;
+    float: left;
+}
+
+.cnt2 {
+    width: 75%;
+    height: 800px;
+    float: left;
+}
+
+.ul1 {
+    list-style: none;
+}
+
+.li1,
+.li1_link {
+    text-decoration: none;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+}
+
+.li1_link1 {
+    text-decoration: none;
+    position: relative;
+    right: 24px;
+    top: 10px;
+    font-size: 20px;
+    color: rgb(169, 145, 11);
+}
+
+h1 {
+    color: rgb(235, 177, 18);
+    position: relative;
+    left: 10px;
+    font-size: 24px;
+    top: 10px;
+}
+
+p {
+    position: relative;
+    left: 10px;
+    top: 15px;
+    width: 550px;
+    font-size: 18.5px;
+    color: rgb(124, 60, 8);
+}
+
+.table {
+    width: 290px;
+    height: 270px;
+    border: solid 6px;
+    border-top-color: rgb(255, 187, 0);
+    border-left-color: rgb(255, 187, 0);
+    border-right-color: rgb(176, 134, 28);
+    border-bottom-color: rgb(176, 134, 28);
+    background-color: rgb(249, 241, 223);
+    position: relative;
+    left: 290px;
+    bottom: 560px;
+}
+
+.p1 {
+    width: 270px;
+    position: relative;
+}
+
+.p2 {
+    position: relative;
+    top: -4px;
+}
+
+footer {
+    width: 800px;
+    height: 50px;
+}
+
+.ft1 {
+    width: 25%;
+    height: 68px;
+    background-image: url(back.jpg);
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.ft2 {
+    width: 75%;
+    height: 50px;
+    border-top: solid;
+    border-color: rgb(255, 217, 0);
+    float: left;
+    position: relative;
+    top: 10px;
+}

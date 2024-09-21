@@ -1,0 +1,138 @@
+ * {
+     padding: 0x;
+     margin: 0x auto;
+ }
+ 
+ .wrapper {
+     height: 1300px;
+     width: 1000px;
+     background-image: url(background.jpg);
+ }
+ 
+ .header {
+     height: 150px;
+     width: 600px;
+ }
+ 
+ .containt {
+     height: 1050px;
+     width: 1000px;
+ }
+ 
+ .cnt1 {
+     height: 1000px;
+     width: 20%;
+     border-right: solid;
+     border-color: green;
+     float: left;
+ }
+ 
+ .cnt2 {
+     height: 1050px;
+     width: 79%;
+     float: left;
+ }
+ 
+ .art1 {
+     height: 210px;
+     width: 170px;
+     background-color: white;
+     margin-left: 15px;
+     box-shadow: 5px 5px 0px #555, 10px 10px 20px #222;
+     position: relative;
+     bottom: 20px;
+ }
+ 
+ .art1_ul {
+     list-style: none;
+     position: relative;
+     top: 15px;
+     right: 25px;
+ }
+ 
+ .art11_li,
+ .link {
+     font-family: 'Times New Roman', Times, serif;
+     text-decoration: none;
+ }
+ 
+ h1 {
+     color: white;
+     border: solid;
+     border-color: green;
+     background-color: green;
+     width: 550px;
+     margin-left: 30px;
+     position: relative;
+     bottom: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-style: italic;
+     letter-spacing: 10px;
+ }
+ 
+ p {
+     font-family: 'Times New Roman', Times, serif;
+     color: white;
+     position: relative;
+     left: 30px;
+     width: 750px;
+     font-size: 20px;
+ }
+ 
+ .p1 {
+     width: 500px;
+ }
+ 
+ .p2 {
+     color: white;
+     text-shadow: 1px 1px 0px #333, 2px 2px 0px #555, -1px -1px 0px #333;
+     transform: rotate(5deg) skew(5deg, -5deg);
+ }
+ 
+ .img1 {
+     height: 400px;
+     width: 250px;
+     position: relative;
+     left: 530px;
+     bottom: 620px;
+ }
+ 
+ h2 {
+     color: white;
+     border: solid;
+     border-color: green;
+     background-color: green;
+     width: 330px;
+     height: 25px;
+     margin-left: 30px;
+     position: relative;
+     bottom: 420px;
+     font-family: Arial, Helvetica, sans-serif;
+     display: flex;
+ }
+ 
+ .ul1 {
+     color: white;
+     position: relative;
+     bottom: 420px;
+     left: 30px;
+     font-size: 20px;
+ }
+ 
+ footer {
+     height: 100px;
+     width: 1000px;
+     border-top: solid;
+     border-color: green;
+     border-style: double;
+ }
+ 
+ .fp {
+     font-family: 'Times New Roman', Times, serif;
+     color: white;
+     position: relative;
+     left: 30px;
+     width: 750px;
+     font-size: 18px;
+     top: 15px;
+ }

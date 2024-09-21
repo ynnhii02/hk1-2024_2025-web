@@ -1,0 +1,137 @@
+.wrapper {
+    width: 800px;
+    height: 950px;
+    border: solid;
+}
+
+header {
+    height: 200px;
+    width: 800px;
+}
+
+.img1 {
+    position: relative;
+    left: 470px;
+}
+
+.containt {
+    border-top: solid;
+    border-color: rgb(255, 217, 0);
+    height: 800px;
+    width: 800px;
+}
+
+.cnt1 {
+    width: 25%;
+    height: 800px;
+    background-image: url(back.jpg);
+    background-repeat: repeat-y;
+    position: relative;
+    float: left;
+}
+
+.cnt2 {
+    width: 75%;
+    height: 800px;
+    float: left;
+}
+
+.ul1 {
+    list-style: none;
+}
+
+.li1,
+.li1_link {
+    text-decoration: none;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+}
+
+.li1_link1 {
+    text-decoration: none;
+    position: relative;
+    right: 24px;
+    top: 10px;
+    font-size: 20px;
+    color: rgb(169, 145, 11);
+}
+
+h1 {
+    color: rgb(235, 177, 18);
+    position: relative;
+    left: 10px;
+    font-size: 24px;
+    top: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(124, 60, 8);
+}
+
+.table1 {
+    width: 170px;
+    height: 180px;
+    position: relative;
+    bottom: 730px;
+    left: 420px;
+    border: solid;
+    border-top-color: rgb(12, 88, 160);
+    border-left-color: rgb(12, 88, 160);
+    border-right-color: rgb(137, 135, 129);
+    border-bottom-color: rgb(137, 135, 129);
+    background-color: rgb(246, 240, 233);
+}
+
+.table2 {
+    width: 170px;
+    height: 110px;
+    position: relative;
+    bottom: 600px;
+    left: -40px;
+    border: solid;
+    border-top-color: rgb(12, 88, 160);
+    border-left-color: rgb(12, 88, 160);
+    border-right-color: rgb(137, 135, 129);
+    border-bottom-color: rgb(137, 135, 129);
+    background-color: rgb(246, 240, 233);
+}
+
+.table3 {
+    width: 170px;
+    height: 130px;
+    position: relative;
+    bottom: 520px;
+    left: 400px;
+    border: solid;
+    border-top-color: rgb(12, 88, 160);
+    border-left-color: rgb(12, 88, 160);
+    border-right-color: rgb(137, 135, 129);
+    border-bottom-color: rgb(137, 135, 129);
+    background-color: rgb(246, 240, 233);
+}
+
+footer {
+    width: 800px;
+    height: 50px;
+}
+
+.ft1 {
+    width: 25%;
+    height: 68px;
+    background-image: url(back.jpg);
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.ft2 {
+    width: 75%;
+    height: 50px;
+    border-top: solid;
+    border-color: rgb(255, 217, 0);
+    float: left;
+    position: relative;
+    top: 10px;
+}

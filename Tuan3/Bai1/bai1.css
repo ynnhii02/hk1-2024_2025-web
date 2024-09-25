@@ -1,0 +1,172 @@
+* {
+    margin: 0px auto;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    height: 600px;
+    background-image: linear-gradient(#6fc9eb, #5fa2f0);
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    border-bottom: dotted 5px white;
+}
+
+.menu {
+    display: inline-flex;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-flex;
+    margin: 30px;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-right p {
+    font-size: 40px;
+    position: relative;
+    left: 980px;
+    bottom: 65px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 15px rgb(4, 8, 232);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    height: 450px;
+    width: 100%;
+    border-bottom: dotted white 5px;
+}
+
+.cnt1 {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.cnt2 {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.ip1 {
+    margin-left: 85px;
+    border-radius: 5px;
+    width: 330px;
+    border-color: blue;
+}
+
+.ip2 {
+    margin-left: 55px;
+    border-radius: 5px;
+    width: 330px;
+    border-color: blue;
+}
+
+.ip3 {
+    margin-left: 134px;
+    border-radius: 5px;
+    width: 330px;
+    border-color: blue;
+}
+
+.ip4 {
+    margin-left: 109px;
+    border-radius: 5px;
+    width: 330px;
+    border-color: blue;
+}
+
+.cnt1-1 {
+    display: inline-flex;
+    margin-top: 3px;
+}
+
+.cnt1-1 p {
+    width: 150px;
+    margin-top: 17px;
+}
+
+.cnt1-1 textarea {
+    margin-left: 15px;
+    border-radius: 5px;
+    border-color: blue;
+}
+
+.cnt1 select {
+    margin-left: 130px;
+    border-radius: 5px;
+    border-color: blue;
+}
+
+.cnt1 h1 {
+    color: white;
+    margin-top: 30px;
+    margin-left: 7px;
+}
+
+#p1 {
+    color: white;
+    margin-top: 30px;
+    margin-left: 7px;
+}
+
+.form {
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.cnt1 button {
+    width: 50px;
+    border: dotted 2px;
+    margin-top: 10px;
+    margin-left: 20px;
+    position: relative;
+    left: 145px;
+    border-radius: 5px;
+    border-color: blue;
+}
+
+.cnt2 img {
+    width: 80%;
+    margin: 40px;
+}
+
+.cnt2 h1 {
+    color: blue;
+    text-shadow: 2px 3px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    left: 100px;
+    bottom: 30px;
+}
+
+.cnt2 p {
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: 120px;
+    bottom: 25px;
+}
+
+footer p {
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+}

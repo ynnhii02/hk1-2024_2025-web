@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22671321_DangHoangViet_Tuan8" content="Javascript_jQuery_Form_Modal_Styles">
+    <title>Facebook Registration</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function (e) { 
+                e.preventDefault(); // Ngăn chặn gửi form mặc định
+
+                // Kiểm tra tính hợp lệ của từng trường đầu vào
+                let hoValid = validateHo();
+                let tenValid = validateTen();
+                let emailValid = validateEmail();
+                let cfmEmailValid = validateConfirmEmail();
+                let passwordValid = validatePassword();
+                let namSinhValid = validateNamSinh();
+
+                // Nếu tất cả đều hợp lệ, hiển thị thông báo "Đăng ký thành công"
+                if (hoValid && tenValid && emailValid && cfmEmailValid && passwordValid && namSinhValid) {
+                    alert("Đăng ký thành công!");
+                } else {
+                    // Ngược lại, hiển thị thông báo lỗi hợp lý
+                    alert("Thông tin đăng ký không hợp lệ. Vui lòng kiểm tra lại.");
+                }
+            });
+
+            // Hàm kiểm tra tính hợp lệ của trường Họ
+            function validateHo() {
+                let ho = $("#Ho").val().trim();
+                if (!/^[A-Z][a-z]*/.test(ho)) {
+                    $("#erho").html("Phải viết hoa đầu từ");
+                    return false;
+                } else {
+                    $("#erho").html("");
+                    return true;
+                }
+            }
+
+            // Hàm kiểm tra tính hợp lệ của trường Tên
+            function validateTen() {
+                let ten = $("#Ten").val().trim();
+                if (!/^[A-Z][a-z]*/.test(ten)) {
+                    $("#erten").html("Phải viết hoa đầu từ");
+                    return false;
+                } else {
+                    $("#erten").html("");
+                    return true;
+                }
+            }
+
+            // Hàm kiểm tra tính hợp lệ của trường Email
+            function validateEmail() {
+                let email = $("#email").val().trim();
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    $("#eremail").html("Email không đúng định dạng");
+                    return false;
+                } else {
+                    $("#eremail").html("");
+                    return true;
+                }
+            }
+
+            // Hàm kiểm tra tính hợp lệ của trường Xác nhận Email
+            function validateConfirmEmail() {
+                let email = $("#email").val().trim();
+                let cfmEmail = $("#confirmemail").val().trim();
+                if (email !== cfmEmail) {
+                    $("#ercfmemail").html("Email nhập lại không đúng");
+                    return false;
+                } else {
+                    $("#ercfmemail").html("");
+                    return true;
+                }
+            }
+
+            // Hàm kiểm tra tính hợp lệ của trường Mật khẩu
+            function validatePassword() {
+                let password = $("#password").val();
+                if (!/^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/.test(password)) {
+                    $("#erpw").html("Mật khẩu không đúng định dạng");
+                    return false;
+                } else {
+                    $("#erpw").html("");
+                    return true;
+                }
+            }
+
+            // Hàm kiểm tra tính hợp lệ của trường Năm sinh
+            function validateNamSinh() {
+                let namSinh = $("#date").val();
+                if (parseInt(namSinh) >= 2002) {
+                    $("#erdate").html("Năm sinh phải nhỏ hơn 2002");
+                    return false;
+                } else {
+                    $("#erdate").html("");
+                    return true;
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="bg-primary">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="text-light ms-3 mt-3">Facebook</h1>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <form action="">
+                        <table>
+                            <tr>
+                                <td><label for="email" class="form-label text-light">Email hoặc điện thoại</label></td>
+                                <td><label for="password" class="form-label text-light">Mật khẩu</label></td>
+                            </tr>
+                            <tr class="">
+                                <td class="me-3">
+                                    <input type="text" class="form-control" id="username">
+                                </td>
+                                <td>
+                                    <input type="password" class="form-control" id="password">
+                                </td>
+                                <td>
+                                    <button type="button" id="ĐangNhap" class="btn btn-primary border">Đăng nhập</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="duytri">
+                                    <label for="duytri" class="form-label text-light">Duy trì đăng nhập</label>
+                                </td>
+                                <td>
+                                    <label for="" class="form-label text-light">Quên mật khẩu?</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="">
+            <div class="row justify-content-end mt-5 mb-5">
+                <div class="col-6">
+                    <h1 style="font-weight: bold;">Đăng ký</h1>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <h5 style="font-weight: bold;">Miễn phí là sẽ luôn như vậy</h5>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span id="erho" class="small"></span>
+                                    <input type="text" placeholder="Họ" class="form-control mb-3" id="Ho">
+                                    
+                                </td>
+                                <td>
+                                    <span id="erten" class="small"></span>
+                                    <input type="text" placeholder="Tên" class="form-control mb-3" id="Ten">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span id="eremail" class="small"></span>
+                                    <input type="email" placeholder="Email đăng nhập" class="form-control mb-3" id="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span id="ercfmemail" class="small"></span>
+                                    <input type="confirmemail" placeholder="Nhập lại email." class="form-control mb-3" id="confirmemail">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span id="erpw" class="small"></span>
+                                    <input type="password" placeholder="Mật khẩu" class="form-control mb-3" id="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span id="erdate" class="small"></span>
+                                    <input type="number" placeholder="Năm sinh" class="form-control mb-3" id="date">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit" class="btn bg-primary text-light w-100">Đăng ký</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                    
+                
+            </div>
+            
+        </section>
+    </div>
+</body>
+</html>

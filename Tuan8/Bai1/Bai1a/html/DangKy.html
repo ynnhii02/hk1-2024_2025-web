@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22671321_DangHoangViet_Tuan8" content="Javascript_jQuery_Form_Modal_Styles">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../Js/jquery-latest.js"></script>
+</head>
+<style>
+    span{
+        color: red;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        //Tên đăng nhập: bắt đầu là ký tự, có hoặc không có ký tự số, ký tự đặc biệt và 
+        //không được có khoảng trắng
+        $("#username").blur(function (e) { 
+            e.preventDefault();
+            let user = $("#username").val();
+            let reguser = /^[a-zA-Z][a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{0,}$/;
+            if (!reguser.test(user)) {//sai
+                $("#eruser").html("Tên đăng nhập không đúng");
+                return false;
+            } else {
+                $("#eruser").html("*");
+                return true;
+            }
+            
+        });
+        //Mật khẩu: từ 8 ký tự trở lên, có ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt  
+        $("#password").blur(function (e) { 
+            e.preventDefault();
+            let pw = $("#password").val();
+            let regpw = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,}$/;
+            if (!regpw.test(pw)) {
+                $("#erpw").html("Mật khẩu: từ 8 ký tự trở lên, có ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt");
+                return false;
+            } else {
+                $("#erpw").html("*");
+                return true;
+            }
+        });
+
+        $("#confirmpassword").blur(function (e) { 
+            e.preventDefault();
+            let cfmpw = $("#confirmpassword").val();
+            let pw = $("#password").val();
+            if(ps!==cfmpw){
+                $("#ercfmpw").html("Mật khẩu nhập lại không đúng");
+                return false;
+            }else{
+                $("#ercfmpw").html("*");
+                return true;
+            }
+            
+        });
+        //Họ tên: Phải có ít nhất Họ, Tên. Ký tự đầu bắt buộc phải viết hoa
+        $("#name").blur(function (e) { 
+            e.preventDefault();
+            let name = $("#name").val();
+            let regname = /^([A-Z][a-z]*\s)+([A-Z][a-z]*)$/;
+            if (!regname.test(name)) {
+                $("#ername").html("Vui lòng nhập lại");
+                return false;
+            } else {
+                $("#ername").html("* Bắt buộc");
+                return true;
+            }
+        });
+        //Ngày tháng năm sinh phải trên 16 tuổi 
+        $("#date").blur(function (e) { 
+            e.preventDefault();
+            let ntns = $("#date").val();
+            ntns = new Date(ntns);
+
+            let today = new Date();
+            let tuoi = today.getFullYear() - ntns.getFullYear();
+            if(tuoi <16){
+                $("#erdate").html("Phải trên 16 tuổi");
+                return false;
+            }else{
+                $("#erdate").html("* Bắt buộc");
+                return true;
+            }  
+        });
+        //Địa chỉ không được để trống
+        $("#diaChi").blur(function (e) { 
+            e.preventDefault();
+            let diaChi = $("#diaChi").val().trim();
+            if(diaChi===""){
+                $("#erdiaChi").html("Không được để trống");
+                return false;
+            }
+            else{
+                $("#erdiaChi").html("");
+                return true;
+            }  
+        });
+        //Điện thoại: là số điện thoại 10 ký tự số, bắt đầu là 09, 03, 07, 06, 05, 04
+        $("#phone").blur(function (e) { 
+            e.preventDefault();
+            let dienthoai = $("#phone").val();
+            let regdienThoai = /^[0][3-9]\d{8}$/;
+            if(!regdienThoai.test(dienthoai)){
+                $("#erphone").html("Phải là số");
+                return false;
+            }
+            else{
+                $("#erphone").html("");
+                return true;
+            }
+            
+        });
+        //Email: luôn đúng định dạng của địa chỉ email. 
+        $("#email").blur(function (e) { 
+            e.preventDefault();
+            let email = $("#email").val().trim(); 
+            let regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Biểu thức chính quy kiểm tra định dạng email
+         if (!regEmail.test(email)) {
+                $("#eremail").html("Email không đúng định dạng");
+                return false;
+            } else {
+                $("#eremail").html("");
+                return true;
+            }
+            
+        });
+    });
+</script>
+<body>
+    <div class="container border">
+        <h1 class="text-center">Đăng ký tài khoản</h1>
+        <form action="">
+            <table class="table">
+                <tr>
+                    <td class="text-end">
+                        <label for="username">Tên đăng nhập:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="text" class="form-control" id="username" placeholder="txtDN"><span id="eruser">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="password">Mật khẩu:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="password" class="form-control" id="password" placeholder="txtMK"><span id="erpw">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="confirmpassword">Nhập lại mật khẩu:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="password" class="form-control" id="confirmpassword" placeholder="txtXNMK"><span id="ercfmpw">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center"><h1>Thông tin cá nhân</h1></td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="hoTen" class="form-label">Họ và tên:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="text" placeholder="txtName" class="form-control" id="name">
+                        <span id="ername" class="w-50"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="date" class="form-label">Ngày sinh:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="date" placeholder="txtName" class="form-control" id="date">
+                        <span class="w-50" id="erdate"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="">Giới tính:</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="nam">
+                        <label for="nam">Nam</label>
+                        <input type="radio" name="gender" id="nu">
+                        <label for="nu">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="diaChi">Địa chỉ:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" placeholder="txtDC" id="diaChi">
+                        <span id="erdiaChi"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="phone">Điện thoại:</label>
+                    </td>
+                    <td class="d-flex">
+                        <input type="text" placeholder="txtDT" id="phone" class="form-control">
+                        <span class="w-50 ps-2" id="erphone"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" class="form-control" placeholder="txtEmail" id="email">
+                        <span id="eremail"></span>
+                    </td>
+                </tr>
+                <tr class="text-center">
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-dark" id="DangKy">Đăng ký</button>
+                        <button type="reset" class="btn btn-dark" id="Huy">Hủy</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

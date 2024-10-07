@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22671321_DangHoangViet_Tuan8" content="Javascript_jQuery_Form_Modal_Styles">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Xử lý sự kiện khi số lượng sản phẩm thay đổi
+            $("input[type='number']").change(function () {
+                // Tính tổng thành tiền
+                var tongTien = 0;
+                $("tr").each(function () {
+                    var soLuong = $(this).find("input[type='number']").val();
+                    var gia = $(this).find(".gia").text();
+                    var thanhTien = parseInt(soLuong) * parseInt(gia);
+                    if (!isNaN(thanhTien)) {
+                        tongTien += thanhTien;
+                    }
+                });
+                // Hiển thị tổng thành tiền
+                $("#tongtien").text(tongTien.toLocaleString() + " VNĐ");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <form action="">
+            <table class="table table-bordered">
+                <tr>
+                    <th>
+                        STT
+                    </th>
+                    <th>
+                        Hình ảnh
+                    </th>
+                    <th>
+                        Gía
+                    </th>
+                    <th>
+                        Số lượng
+                    </th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="height"><img src="../images/1.jpg" alt=""></td>
+                    <td class="gia">20000</td>
+                    <td><input type="number" class="soluong" value="0"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="../images/2.jpg" alt=""></td>
+                    <td class="gia">40000</td>
+                    <td><input type="number" class="soluong" value="0"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="../images/3.jpg" alt=""></td>
+                    <td class="gia">300000</td>
+                    <td><input type="number" class="soluong" value="0"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="../images/4.jpg" alt=""></td>
+                    <td class="gia">50000</td>
+                    <td><input type="number" class="soluong" value="0"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img src="../images/5.jpg" alt=""></td>
+                    <td class="gia">30000</td>
+                    <td><input type="number" class="soluong" value="0"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Tổng thành tiền</td>
+                    <td id="tongtien"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

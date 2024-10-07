@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Thông Tin Đăng Ký</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tên đăng nhập</th>
+                <th>Mật khẩu</th>
+                <th>Ngày sinh</th>
+                <th>Điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Email</th>
+                <th>Sở thích</th>
+            </tr>
+            <tr>
+                <td><span id="hoTen"></span></td>
+                <td><span id="TenDangNhap"></span></td>
+                <td><span id="MatKhau"></span></td>
+                <td><span id="ngaySinh"></span></td>
+                <td><span id="dienThoai"></span></td>
+                <td><span id="diaChi"></span></td>
+                <td><span id="email"></span></td>
+                <td><span id="soThich"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // Lấy thông tin đã đăng ký từ URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var hoTen = urlParams.get('hoTen');
+    var TenDangNhap = urlParams.get('username');
+    var MatKhau = urlParams.get('password');
+    var ngaySinh = urlParams.get('ngaySinh');
+    var dienThoai = urlParams.get('dienThoai');
+    var diaChi = urlParams.get('diaChi');
+    var email = urlParams.get('email');
+    var soThich = urlParams.get('soThich');
+
+    // Hiển thị thông tin đã đăng ký trên trang thông tin
+    document.getElementById('hoTen').textContent = hoTen;
+    document.getElementById('TenDangNhap').textContent = TenDangNhap;
+    document.getElementById('MatKhau').textContent = MatKhau;
+    document.getElementById('ngaySinh').textContent = ngaySinh;
+    document.getElementById('dienThoai').textContent = dienThoai;
+    document.getElementById('diaChi').textContent = diaChi;
+    document.getElementById('email').textContent = email;
+    document.getElementById('soThich').textContent = soThich;
+
+</script>
+</body>
+</html>

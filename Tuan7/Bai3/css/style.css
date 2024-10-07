@@ -1,0 +1,12 @@
+.err{
+    color: red;
+    font-style: italic;
+}
+#dienThoai::-webkit-inner-spin-button,
+#dienThoai::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.background{
+    background: linear-gradient(0deg, rgb(143, 243, 187),rgb(218, 250, 239));
+}

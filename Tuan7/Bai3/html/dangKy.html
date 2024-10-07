@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22671321_DangHoangViet_Tuan07" content="Javascript-jQuery">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../Js/jquery-latest.js"></script>
+    <script src="../Js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container background">
+        <h1 class="text-center">Register Form</h1>
+        <form id="registrationForm">
+            <table class="table table-bordered ">
+                <tr>
+                    <td class="text-end">
+                        <label class="form-label">Họ và tên <samp class="err">(*)</samp>:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="hoTen" name="hoTen">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label class="form-label">Tên Đăng nhập <samp class="err">(*)</samp>:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label class="form-label">Mật khẩu <samp class="err">(*)</samp>:</label>
+                    </td>
+                    <td>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label class="form-label">Xác nhận mật khẩu <samp class="err">(*)</samp>:</label>
+                    </td>
+                    <td>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label class="form-label">Ngày sinh:</label>
+                    </td>
+                    <td class="d-flex justify-content-center align-items-center float-start w-100">
+                        <input type="number" id="ngaySinh" class="w-25 rounded-3" name="ngaySinh">
+                        Tháng:<input type="number" id="thangSinh" class="w-25 rounded-3" name="thangSinh">
+                        Năm:<input type="number" id="namSinh" class="w-25 rounded-3" name="namSinh">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="" class="form-label">Điện thoại:</label>
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="dienThoai" name="dienThoai">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="" class="form-label">Địa chỉ:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="diaChi" name="diaChi">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="" class="form-label">Email khác:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end">
+                        <label for="" class="form-label">Sở thích:</label>
+                    </td>
+                    <td class="float-start w-100">
+                        <select id="soThich" name="soThich">
+                            <option value="CaNhac">Ca Nhạc</option>
+                            <option value="BongDa">Bóng Đá</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="float-start w-100">
+                        <button class="btn border-5 bg-secondary me-5" type="submit">Dang Ky</button>
+                        <button class="btn border-5 bg-danger" type="reset" id="huy">Huy</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#registrationForm").submit(function (e) { 
+
+                $("#huy").click(function () {
+                // Xóa giá trị của các trường input và select
+                $("#hoTen, #username, #password, #confirmPassword, #dienThoai, #diaChi, #email, #soThich").val("");
+            });
+            
+                var hoTen = $("#hoTen").val().trim();
+                var username = $("#username").val();
+                var password = $("#password").val();
+                var confirmPW = $("#confirmPassword").val();
+                var numberPhone = $("#dienThoai").val();
+                var email = $("#email").val();
+                var soThich = $("#soThich").val(); // Lấy giá trị của sở thích từ dropdown
+                
+                var regname = /^[\p{L}\s']+$/u;
+                var regusername = /^.{6,}$/;
+                var regSDT = /^\d+$/;
+                var regemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if(hoTen ===""){
+                    alert("Không được để trống Họ và tên.");
+                    $("#hoTen").focus();
+                    e.preventDefault();
+                } else if (!regname.test(hoTen)){
+                    alert("Vui lòng nhập lại họ tên.")
+                    $("#hoTen").focus();
+                    e.preventDefault();
+                } else if(username ===""){
+                    alert("Không được để trống Tên Đăng nhập.");
+                    $("#username").focus();
+                    e.preventDefault();
+                } else if (!regusername.test(username)){
+                    alert("Tên đăng nhập phải có ít nhất 6 ký tự.");
+                    $("#username").focus();
+                    e.preventDefault();
+                } else if(password===""){
+                    alert("Không được để trống Mật khẩu.");
+                    $("#password").focus();
+                    e.preventDefault();
+                } else if(confirmPW === ""){
+                    alert("Vui lòng nhập lại mật khẩu.");
+                    $("#confirmPassword").focus();
+                    e.preventDefault();
+                } else if(password != confirmPW){
+                    alert("Mật khẩu nhập lại không khớp");
+                    $("#confirmPassword").focus();
+                    e.preventDefault();
+                } else if(!regSDT.test(numberPhone)){
+                    alert("Nhập lại số điện thoại");
+                    $("#dienThoai").focus();
+                    e.preventDefault();
+                } else if (!regemail.test(email)){
+                    alert("Nhập lại email");
+                    $("#email").focus();
+                    e.preventDefault();
+                } else {
+                    alert("Đăng ký thành công");
+                    var redirectUrl = "thongtin.html" +
+                                      "?hoTen=" + encodeURIComponent(hoTen) +
+                                      "&username=" + encodeURIComponent(username) +
+                                      "&password=" + encodeURIComponent(password) +
+                                      "&ngaySinh=" + encodeURIComponent(ngaySinh) +
+                                      "&dienThoai=" + encodeURIComponent(numberPhone) +
+                                      "&diaChi=" + encodeURIComponent(diaChi) +
+                                      "&email=" + encodeURIComponent(email) +
+                                      "&soThich=" + encodeURIComponent(soThich);
+                    window.location.href = redirectUrl;
+                    e.preventDefault();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

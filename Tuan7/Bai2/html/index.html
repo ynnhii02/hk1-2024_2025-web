@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="22671321_DangHoangViet_Tuan07" content="Javascript-jQuery cơ bản">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../Js/jquery-latest.js"></script>
+  <script src="../Js/jquery.min.js"></script>
+  <script src="../css/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="../images/header.jpg" alt="" class="w-100">
+    </header>
+    <section class="d-flex">
+      <div class="left">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td colspan="2" class="text-center table-active">
+                <h1>Bản tin thị trường</h1>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center">
+                <h3>Vàng</h3>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <td>Mua</td>
+              <td>bán</td>
+            </tr>
+            <tr>
+              <td><span id="vang-mua"></span></td>
+              <td><span id="vang-ban"></span></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center">
+                <h3>USD</h3>
+              </td>
+
+            </tr>
+            <tr class="text-center">
+              <td>Mua</td>
+              <td>bán</td>
+            </tr>
+            <tr>
+              <td><span id="usd-mua"></span></td>
+              <td><span id="usd-ban"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="center">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td colspan="2" class="text-center table-active">
+                <h1>Cập nhật giá cả thị trường</h1>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <td><label for="" class="form-label">Mua vào</label></td>
+              <td class="d-flex"><input type="text" class="form-control" id="muaVao"><span class="errmua">(*)</span>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <td><label for="" class="form-label">Bán ra</label></td>
+              <td class="d-flex"><input type="text" class="form-control" id="banRa"><span class="errBan">(*)</span></td>
+            </tr>
+            <tr class="">
+              <td class="text-center"><label for="" class="form-label">Loại xe</label></td>
+              <td>
+                <select name="loaixe" id="loaixe">
+                  <option value="../images/car1.png;35000">Toyota</option>
+                  <option value="../images/car2.png;15000">KIA</option>
+                  <option value="../images/car3.png;40000">Ford</option>
+                  <option value="../images/car4.png;32000">Civic</option>
+                  <option value="../images/car5.png;50000">Ferrari</option>
+                  <option value="../images/car7.png;45000">Mercedes</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <td></td>
+              <td>
+                <label for="" class="float-start">
+                  <input type="radio" class="me-3" name="radioGroup" value="1" id="radio1" >
+                  Vàng
+                </label>
+                <label for="" class="float-end">
+                  <input type="radio" class="me-3" name="radioGroup" value="0" id="radio0">
+                  USD
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="">
+                <button type="button" class="btn border float-start" id="update">Update</button>
+                <button type="button" class="btn border float-end" id="state" disabled>State</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td class="text-center table-active">
+                <h1>Bản báo cáo giá</h1>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                <p>-Với kiểu dáng thể thao sang trọng</p>
+                <p>-Nổi bật ít tốn nguyên liệu</p>
+                <p>-Kiểu dáng thể thao</p>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                <img src="../images/car1.png" alt="Toyota" id="hinhxe" class="w-100">
+              </td>
+            </tr>
+            <tr class="text-success">
+              <td>Giá:
+                <span id="gia">35000</span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+    <script src="../Js/index.js"></script>
+  </div>
+</body>
+
+</html>

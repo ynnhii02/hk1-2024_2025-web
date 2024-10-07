@@ -1,0 +1,19 @@
+.left{
+    width: 30%;
+}
+.center{
+    width: 40%;
+}
+.right{
+    width: 30%;
+}
+.errmua, .errBan{
+    color: red;
+    font-style: italic;
+}
+h1 {
+    color: blue;
+}
+h3 {
+    color: rgb(69, 126, 233);
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--form 1-->
+    <div style="background-color: lightskyblue;">
+        <center><b>Registration Form</b></center>
+        <center><i>Register your Jackson Electronics product here</i></center>
+        <label for="fname"><b>First Name:</b></label>
+        <input type="text" id="fname" name="fname">
+        <label for="lname"><b>Last Name:</b></label>
+        <input type="text" id="lname" name="lname"> <br>
+        <label for="Address#1"><b>Address#1:</b></label>
+        <input type="text" id="Address#1" name="Address#1"> <br>
+        <label for="Address#2"><b>Address#2:</b></label>
+        <input type="text" id="Address#2" name="Address#2"> <br>
+        <label for="city"><b>City:</b></label>
+        <input type="text" id="city" name="city"> &nbsp;&nbsp;
+        <label for="State"><b>State:</b></label>
+        <input type="text" id="State" name="State"> &nbsp;&nbsp;
+        <label for="Zip"><b>Zip:</b></label>
+        <input type="text" id="zip" name="zip"> <br>
+        <label for="country"><b>Country:</b></label>
+        <input type="text" id="country" name="country">
+        <hr>
+        <label for="product"><b>product:</b></label>
+        <select name="procduct" id="product">
+            <option value="text">ScanMaster</option>
+            <option value="text">abcxyz</option>
+        </select> <br>
+        <label for="dt"><b>Date Purchased:</b></label>
+        <input type="number" id="dt" name="dt"> <br>
+        <label for="seri"><b>Serial#:</b></label>
+        <input type="number" id="seri" name="seri"><br>
+        <label for="use"><b>Used for:</b>
+                <input type="radio" name="question1" value="home"> Home
+                <input type="radio" name="question1" value="edu"> Education Institution <br>
+                <input type="radio" name="question1" value="business"> Business
+                <input type="radio" name="question1" value="Other"> Other <br>
+                <input type="radio" name="question1" value="government"> Government
+            </label><br>
+        <p><b>System (check all that apply)</b></p>
+        <label>
+                <input type="checkbox"> Windows 
+                <input type="checkbox"> UNIX <br>
+                <input type="checkbox"> Macintosh
+                <input type="checkbox"> Other 
+            </label>
+        <hr>
+        <label for="cmt"><b>Comments?</b></label>
+        <textarea name="cmt" id="cmt" rows="5" cols="50"></textarea>
+    </div>
+    <hr>
+    <!--form 2-->
+    <h2>Contact Us</h2>
+    <fieldset>
+        <legend>Your message:</legend>
+        <form action="/submit_form" method="post" enctype="multipart/form-data">
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" value="Example Cafe" readonly><br><br>
+
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="10" cols="30"></textarea><br><br>
+
+            <label for="file">Attach File:</label>
+            <input type="file" id="file" name="file"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>How you found us:</legend>
+        <label for="how">How did you hear of us:</label>
+        <select id="how" name="how">
+                <option value="google">Google</option>
+                <option value="friends">Friends</option>
+                <option value="social_media">Social Media</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+        <label for="newsletter">Ensure this box is checked if you would like to receive email updates</label><br><br>
+    </fieldset>
+
+    <button type="submit">Send message</button>
+    </form>
+    <hr>
+    <!-- form 3 -->
+    <fieldset>
+        <form>
+            <label for="name">Name:</label> <br>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="phone">Telephone number:</label> <br>
+            <input type="text" name="phone" id="phone"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" id="email"> <br> <br>
+            <label for="color">Favorite color:</label><br>
+            <input type="color" name="color" id="color" value="#0000FF"> <br><br>
+            <label for="date">Date of Birth:</label>
+            <input type="date" name="date" id="date">
+        </form>
+    </fieldset>
+    <button type="submit">submit</button>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout Example</title>
+    <style>
+        body {
+            width: 960px;
+            margin: 0 auto;
+            height: 750px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        .top-menu {
+            height: 50px;
+        }
+        
+        .header {
+            height: 150px;
+        }
+        
+        .footer {
+            height: 100px;
+        }
+        
+        .content {
+            height: 450px;
+            width: 100%;
+        }
+        
+        .left {
+            width: 20%;
+        }
+        
+        .center {
+            width: 40%;
+        }
+        
+        .right {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr class="top-menu">
+            <td colspan="3">Top Menu</td>
+        </tr>
+        <tr class="header">
+            <td colspan="3">Header</td>
+        </tr>
+        <tr class="content">
+            <td class="left">Left</td>
+            <td class="center">Center</td>
+            <td class="right">Right</td>
+        </tr>
+        <tr class="footer">
+            <td colspan="3">Footer</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+table th,td {
+    border: 1px solid black;
+}
+table{
+    width: auto;
+    border-collapse: collapse;
+}
+h1{
+    color: pink;
+    text-transform: uppercase;
+    padding: 0px 20px;
+}

@@ -1,0 +1,29 @@
+table {
+    border: 2px double;
+    width: 50%;
+    margin: 20px;
+
+}
+
+th,
+td {
+    border: 2px double black;
+    padding: 8px;
+    text-align: center;
+}
+.border-tr{
+   
+    color: pink;
+    font-size: 20px;
+    
+}
+.border-tr th {
+    border-bottom: 2px solid palevioletred;
+    border-right: 2px solid palevioletred;
+    padding: 0px 0px;
+}
+*{
+    padding: 0px;
+    margin: 0px auto;
+    box-sizing: border-box;
+}

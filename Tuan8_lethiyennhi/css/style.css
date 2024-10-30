@@ -1,0 +1,12 @@
+.container{
+    width: 960px;
+    
+    border: 1px solid;
+}
+footer h5{
+    font-size: 14px;
+    color: rgb(84, 83, 82);
+}
+span{
+    color: red;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan8</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="..//js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="..//css/style.css">
+</head>
+<body>
+    <div class="container">
+       
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div
+            class="modal fade"
+            id="mo"
+            tabindex="-1"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-mg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="modalTitleId">
+                            THONG TIN THANH TOAN
+                        </h3>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >x</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Ma hoc vien:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="vien">
+                            </div>
+                            <div class="col-1">
+                                <span id="loivien">*</span>
+                            </div>
+
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Ho ten:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="ten">
+                            </div>
+                            <div class="col-1">
+                                <span id="loiten">*</span>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Email:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="meo">
+                            </div>
+                            <div class="col-1">
+                                <span id="loimeo">*</span>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Dich vu:</label>
+                            </div>
+                            <div class="col-6">
+                               <select name="" id="dich" class="form-control">
+                                <option value="20000">Boi</option>
+                                <option value="100000">Lan</option>
+
+                               </select>
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Gia tien:</label>
+                            </div>
+                            <div class="col-6">
+                                <input id="gia" type="text" class="form-control">
+                            </div>
+                           
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Do dung:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="" class="dung" value="300000">
+                                <label for="">Ao quan boi</label>
+                                <br><input type="checkbox" name="" class="dung" value="200000">
+                                <label for="">Phao</label>
+                                <br><input type="checkbox" name="" class="dung" value="800000">
+                                <label for="">Kinh boi</label>
+                            </div>
+                           
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <label for="">Tien do dung</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="tiendung">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <label for="">Tong tien:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="tong">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-success w-100" id="gui">Thanh toan</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Huy</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <div class="row text-end">
+                            <div class="col-12">
+                                <h3>Trang thanh toan</h3>
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+            const myModal = new bootstrap.Modal(
+                document.getElementById("modalId"),
+                options,
+            );
+        </script>
+        
+        <div class="row">
+            <div class="col-12">
+                <img src="..//img/header.png" alt="" class="w-100">
+            </div>
+        </div>
+        <nav class="nav        ">
+            <a class="nav-link active" aria-current="page" href="#">Trang chu</a>
+            <a class="nav-link" href="#" id="dangky">Dang ky</a>
+            <a class="nav-link" href="#">Tro giup</a>
+            
+        </nav>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Ma hoc vien</th>
+                    <th scope="col">Ho ten</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ten dich vu</th>
+                    <th scope="col">Ten do dung</th>
+                    <th scope="col">Tong tien</th>
+                </tr>
+            </thead>
+            <tbody id="bang">
+                
+            </tbody>
+        </table>
+        <footer>
+            <div class="row text-center">
+                <div class="col-4">
+                    <h5>Ma sinh vien: 22657371</h5>
+                
+                </div>
+                <div class="col-4">
+                    <h5>Ho ten: Le Thi Yen Nhi</h5>
+                
+                </div>
+                <div class="col-4">
+                    <h5>Phong thi: B1.5.2</h5>
+                
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+        
+    </div>
+    <script src="..//js/jquery.js"></script>
+</body>
+</html>
